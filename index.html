@@ -3,15 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <title>Yoon Kim – Portfolio</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
       padding: 60px;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #111;
+    }
+
+    header {
+      margin-bottom: 80px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0 0 12px 0;
+      font-weight: 500;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* ===== Grid ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .item {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .thumb {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #eaeaea;
+      margin-bottom: 12px;
+      transition: opacity 0.3s ease;
+    }
+
+    .item:hover .thumb {
+      opacity: 0.85;
+    }
+
+    .item h2 {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .item span {
+      font-size: 13px;
+      color: #888;
     }
   </style>
 </head>
+
 <body>
-  <h1>Yoon Kim</h1>
-  <p>Industrial Design Portfolio</p>
+
+  <header>
+    <h1>Yoon Kim</h1>
+    <p>Industrial Design · Interaction · System</p>
+  </header>
+
+  <main class="grid">
+    <a class="item" href="#">
+      <div class="thumb"></div>
+      <h2>Project Title 01</h2>
+      <span>2024</span>
+    </a>
+
+    <a class="item" href="#">
+      <div class="thumb"></div>
+      <h2>Project Title 02</h2>
+      <span>2023</span>
+    </a>
+
+    <a class="item" href="#">
+      <div class="thumb"></div>
+      <h2>Project Title 03</h2>
+      <span>2023</span>
+    </a>
+  </main>
+
 </body>
 </html>
