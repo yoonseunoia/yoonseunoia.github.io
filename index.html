@@ -8,11 +8,13 @@
 
 <body>
 
+  <!-- ===== Header ===== -->
   <header>
     <h1>Yoon Kim</h1>
     <p>Industrial Design · Interaction · System</p>
   </header>
 
+  <!-- ===== About ===== -->
   <section class="about">
     <p class="about-main">
       I design systems and interactions that connect technology,
@@ -40,13 +42,65 @@
     </div>
   </section>
 
+  <!-- ===== Portfolio Grid ===== -->
   <main class="grid">
-    <a class="item" href="#">
-      <img class="thumb" src="images/thumbs/project1.png" alt="Project 1 thumbnail" />
-      <h2>Project Title 01</h2>
-      <span>2024</span>
-    </a>
+    <div class="item" id="openModal">
+      <img
+        class="thumb"
+        src="images/thumbs/project1.png"
+        alt="Project thumbnail"
+      />
+      <h2>Time Capsule</h2>
+      <span>2024 · Interaction Design</span>
+    </div>
   </main>
+
+  <!-- ===== Project Modal ===== -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">✕</button>
+
+      <h2>Time Capsule</h2>
+      <p class="modal-meta">Interaction Design · 2024</p>
+
+      <p>
+        Time Capsule is an interactive object that allows users to revisit
+        personal memories by selecting a specific year.
+      </p>
+
+      <p>
+        Through physical interaction, sound, and printed images, the project
+        explores how technology can evoke emotional connections to the past.
+      </p>
+
+      <p>
+        The project focuses on designing a system that bridges digital data
+        and tangible experience, emphasizing reflection, slowness,
+        and personal storytelling.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Script ===== -->
+  <script>
+    const openBtn = document.getElementById("openModal");
+    const modal = document.getElementById("projectModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+  </script>
 
 </body>
 </html>
