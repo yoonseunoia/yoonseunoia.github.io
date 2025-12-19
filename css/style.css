@@ -1,0 +1,117 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 60px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Header ===== */
+header {
+  margin-bottom: 100px;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+}
+
+header p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* ===== About ===== */
+.about {
+  max-width: 800px;
+  margin-bottom: 120px;
+}
+
+.about-main {
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.about h3 {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* ===== Portfolio Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.item {
+  transition: opacity 0.3s ease;
+}
+
+.item:hover {
+  opacity: 0.85;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #eaeaea;
+  margin-bottom: 12px;
+}
+
+.item h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.item span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 32px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
