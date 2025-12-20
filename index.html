@@ -46,53 +46,37 @@
   <main class="grid">
     <!-- Project 1 -->
     <div
-     class="item"
-     data-title="Into Twelve Records of Ordinary Autumn"
+      class="item"
+      data-title="Into Twelve Records of Ordinary Autumn"
       data-meta="Information Design · 2025"
-     data-desc="Time Capsule is an interactive object that allows users to revisit personal memories through physical interaction, sound, and printed images."
-   >
-     <img class="thumb" src="images/thumbs/project1.png" alt="Time Capsule thumbnail" />
+      data-desc="This project records everyday autumn scenes through twelve visual narratives. It explores how ordinary moments can be archived, categorized, and emotionally translated through information design."
+    >
+      <img class="thumb" src="images/thumbs/project1.png" alt="Project 1 thumbnail" />
       <h2>Into Twelve Records of Ordinary Autumn</h2>
-     <span>Information Design · 2025</span>
-   </div>
+      <span>Information Design · 2025</span>
+    </div>
 
-   <!-- Project 2 -->
-   <div
+    <!-- Project 2 -->
+    <div
       class="item"
       data-title="Emotional Records of My Cities"
       data-meta="Information Design · 2025"
-      data-desc="City Aura is a data-driven visualization project that explores the emotional atmosphere of urban spaces by translating subjective experiences into visual forms."
-   >
-     <img class="thumb" src="images/thumbs/project2.png" alt="City Aura thumbnail" />
-     <h2>Emotional Records of My Cities</h2>
-     <span>Information Design · 2025</span>
-   </div>
+      data-desc="Emotional Records of My Cities visualizes personal emotional data collected from different cities. The project translates subjective experiences into color, density, and rhythm-based visual systems."
+    >
+      <img class="thumb" src="images/thumbs/project2.png" alt="Project 2 thumbnail" />
+      <h2>Emotional Records of My Cities</h2>
+      <span>Information Design · 2025</span>
+    </div>
   </main>
-
 
   <!-- ===== Project Modal ===== -->
   <div class="modal" id="projectModal">
     <div class="modal-content">
       <button class="modal-close" id="closeModal">✕</button>
 
-      <h2>Into Twelve Records of Ordinary Autumn</h2>
-      <p class="modal-meta">Information Design · 2025</p>
-
-      <p>
-        Time Capsule is an interactive object that allows users to revisit
-        personal memories by selecting a specific year.
-      </p>
-
-      <p>
-        Through physical interaction, sound, and printed images, the project
-        explores how technology can evoke emotional connections to the past.
-      </p>
-
-      <p>
-        The project focuses on designing a system that bridges digital data
-        and tangible experience, emphasizing reflection, slowness,
-        and personal storytelling.
-      </p>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-meta" id="modalMeta"></p>
+      <p id="modalDesc"></p>
     </div>
   </div>
 
@@ -107,15 +91,15 @@
     const modalDesc = document.getElementById("modalDesc");
 
     items.forEach(item => {
-     item.addEventListener("click", () => {
-       modalTitle.textContent = item.dataset.title;
-       modalMeta.textContent = item.dataset.meta;
+      item.addEventListener("click", () => {
+        modalTitle.textContent = item.dataset.title;
+        modalMeta.textContent = item.dataset.meta;
         modalDesc.textContent = item.dataset.desc;
 
-       modal.classList.add("active");
-     });
-   });
-\
+        modal.classList.add("active");
+      });
+    });
+
     closeBtn.addEventListener("click", () => {
       modal.classList.remove("active");
     });
@@ -124,9 +108,8 @@
       if (e.target === modal) {
         modal.classList.remove("active");
       }
-   });
+    });
   </script>
-
 
 </body>
 </html>

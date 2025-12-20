@@ -79,6 +79,7 @@ header p {
 }
 
 .item {
+  cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
@@ -94,7 +95,6 @@ header p {
   background: #eaeaea;
 }
 
-
 .item h2 {
   font-size: 16px;
   font-weight: 500;
@@ -104,43 +104,6 @@ header p {
 .item span {
   font-size: 13px;
   color: #888;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  body {
-    padding: 32px;
-  }
-
-  .about-info {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-/* ===== Project Detail Page ===== */
-.project {
-  max-width: 900px;
-  margin: 0 auto 120px auto;
-}
-
-.project-desc {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 60px;
-  color: #333;
-}
-
-.project img {
-  width: 100%;
-  margin-bottom: 60px;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #555;
 }
 
 /* ===== Modal ===== */
@@ -184,7 +147,6 @@ header p {
 .modal-content p {
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 20px;
 }
 
 .modal-close {
@@ -195,4 +157,16 @@ header p {
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 32px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
