@@ -118,7 +118,7 @@ header p {
   }
 }
 
-/* ===== Project Detail ===== */
+/* ===== Project Detail Page ===== */
 .project {
   max-width: 900px;
   margin: 0 auto 120px auto;
@@ -129,6 +129,18 @@ header p {
   line-height: 1.6;
   margin-bottom: 60px;
   color: #333;
+}
+
+.project img {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
 }
 
 /* ===== Modal ===== */
